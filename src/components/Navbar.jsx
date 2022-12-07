@@ -1,9 +1,11 @@
+import Theme from "./Theme";
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+      <nav className="main-header navbar navbar-expand navbar-light">
         {/* Left navbar links */}
         <ul className="navbar-nav">
           <li className="nav-item">
@@ -188,12 +190,7 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav-item">
-            <span
-              className="nav-link"
-              role="button"
-            >
-              <i className="fas fa-adjust" />
-            </span>
+            <Theme />
           </li>
         </ul>
       </nav>
