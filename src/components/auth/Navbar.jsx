@@ -1,4 +1,8 @@
-import Theme from "./Theme";
+import { Link } from "react-router-dom";
+import Theme from "../Theme";
+import image1 from "./../../assets/dist/img/user1-128x128.jpg";
+import image2 from "./../../assets/dist/img/user8-128x128.jpg";
+import image3 from "./../../assets/dist/img/avatar5.png";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export default function Navbar() {
@@ -18,15 +22,10 @@ export default function Navbar() {
               <i className="fas fa-bars" />
             </a>
           </li>
-          <li className="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" className="nav-link">
-              Home
-            </a>
-          </li>
-          <li className="nav-item d-none d-sm-inline-block">
-            <a href="#" className="nav-link">
-              Contact
-            </a>
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              <i className="fas fa-home"></i>
+            </Link>
           </li>
         </ul>
         {/* Right navbar links */}
@@ -77,7 +76,7 @@ export default function Navbar() {
                 {/* Message Start */}
                 <div className="media">
                   <img
-                    src="dist/img/user1-128x128.jpg"
+                    src={image1}
                     alt="User Avatar"
                     className="img-size-50 mr-3 img-circle"
                   />
@@ -101,7 +100,7 @@ export default function Navbar() {
                 {/* Message Start */}
                 <div className="media">
                   <img
-                    src="dist/img/user8-128x128.jpg"
+                    src={image2}
                     alt="User Avatar"
                     className="img-size-50 img-circle mr-3"
                   />
@@ -125,7 +124,7 @@ export default function Navbar() {
                 {/* Message Start */}
                 <div className="media">
                   <img
-                    src="dist/img/user3-128x128.jpg"
+                    src={image3}
                     alt="User Avatar"
                     className="img-size-50 img-circle mr-3"
                   />

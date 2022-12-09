@@ -1,24 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import $ from "jquery";
 import SidebarMenuDropdown from "./sidebarMenu/SidebarMenuDropdown";
 import SidebarMenuLink from "./sidebarMenu/SidebarMenuLink";
-import adminLteLogo from "./../assets/dist/img/AdminLTELogo.png";
-import userImage from "./../assets/dist/img/user2-160x160.jpg";
+import adminLteLogo from "./../../assets/dist/img/AdminLTELogo.png";
+import userImage from "./../../assets/dist/img/user2-160x160.jpg";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
-  $(function () {
-    // when sidebar menu click, automatically hide sidebar for overlay display
-    $(".sidebar-link").click(function () {
-      $("#sidebar-overlay:visible").click();
-    });
-  });
-
   return (
     <>
       {/* Main Sidebar Container */}
       <aside className="main-sidebar sidebar-dark-primary elevation-4">
         {/* Brand Logo */}
-        <a href="index3.html" className="brand-link">
+        <Link to="/auth" className="brand-link">
           <img
             src={adminLteLogo}
             alt="AdminLTE Logo"
@@ -26,7 +19,7 @@ export default function Sidebar() {
             style={{ opacity: ".8" }}
           />
           <span className="brand-text font-weight-light">AdminLTE 3</span>
-        </a>
+        </Link>
         {/* Sidebar */}
         <div className="sidebar">
           {/* Sidebar user panel (optional) */}
@@ -65,7 +58,7 @@ export default function Sidebar() {
           <nav className="mt-2">
             <ul className="nav nav-pills nav-sidebar flex-column">
               <SidebarMenuLink
-                to="/"
+                to="/auth"
                 text="Dashboard"
                 icon="fas fa-tachometer-alt"
               />
@@ -73,9 +66,9 @@ export default function Sidebar() {
                 icon="fas fa-tachometer-alt"
                 text="Starter Pages"
               >
-                <SidebarMenuLink to="/active-page" text="Active Page" />
+                <SidebarMenuLink to="/auth/blank" text="Active Page" />
 
-                <SidebarMenuLink to="/inactive-page" text="Inactive Page" />
+                <SidebarMenuLink to="/" text="Inactive Page" />
               </SidebarMenuDropdown>
             </ul>
           </nav>
