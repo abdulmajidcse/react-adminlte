@@ -10,8 +10,20 @@ import userImage6 from "./../assets/dist/img/user8-128x128.jpg";
 import userImage7 from "./../assets/dist/img/user2-160x160.jpg";
 import userImage8 from "./../assets/dist/img/avatar5.png";
 import userImage9 from "./../assets/dist/img/default-150x150.png";
+import { useDispatch } from "react-redux";
+import { updateLoading } from "./../features/loading/loadingSlice";
+import { useEffect } from "react";
 
 export default function Dashboard() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(updateLoading({ is: false }));
+    return () => {
+      dispatch(updateLoading({ is: true }));
+    };
+  }, [dispatch]);
+
   return (
     <>
       <AuthCard
