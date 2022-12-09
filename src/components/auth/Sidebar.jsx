@@ -4,12 +4,22 @@ import SidebarMenuLink from "./sidebarMenu/SidebarMenuLink";
 import adminLteLogo from "./../../assets/dist/img/AdminLTELogo.png";
 import userImage from "./../../assets/dist/img/user2-160x160.jpg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { themeTypes } from "./../../features/theme/themeSlice";
 
 export default function Sidebar() {
+  const theme = useSelector((state) => state.theme);
+
   return (
     <>
       {/* Main Sidebar Container */}
-      <aside className="main-sidebar sidebar-dark-primary elevation-4">
+      <aside
+        className={`main-sidebar elevation-4 ${
+          theme.mode === themeTypes.dark
+            ? "sidebar-dark-primary"
+            : "sidebar-light-indigo"
+        }`}
+      >
         {/* Brand Logo */}
         <Link to="/auth" className="brand-link">
           <img

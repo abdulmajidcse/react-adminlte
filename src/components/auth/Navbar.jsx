@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
-import Theme from "../Theme";
+import Theme from "./../../features/theme/Theme";
 import image1 from "./../../assets/dist/img/user1-128x128.jpg";
 import image2 from "./../../assets/dist/img/user8-128x128.jpg";
 import image3 from "./../../assets/dist/img/avatar5.png";
+import { useSelector } from "react-redux";
+import { themeTypes } from "./../../features/theme/themeSlice";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export default function Navbar() {
+  const theme = useSelector((state) => state.theme);
+
   return (
     <>
       {/* Navbar */}
-      <nav className="main-header navbar navbar-expand navbar-light">
+      <nav
+        className={`main-header navbar navbar-expand ${
+          theme.mode === themeTypes.dark ? "navbar-dark" : "navbar-light"
+        }`}
+      >
         {/* Left navbar links */}
         <ul className="navbar-nav">
           <li className="nav-item">

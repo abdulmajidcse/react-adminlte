@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Blank from "../pages/Blank";
-import Dashboard from "../pages/Dashboard";
+import Blank from "./../pages/Blank";
+import Dashboard from "./../pages/Dashboard";
 import AuthLayout from "./../components/layouts/AuthLayout";
 
-export default function RoutesIndex() {
+export default function RouteIndex() {
   return (
     <>
       <Routes>

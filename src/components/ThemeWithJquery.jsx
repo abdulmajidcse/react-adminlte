@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-export default function Theme() {
+export default function ThemeWithJquery() {
   // theme style switch
   function switchThemeStyles(theme) {
     $("body").removeClass("dark-mode");
