@@ -7,7 +7,7 @@ export default function RoutesIndex() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Navigate to="/auth" />} />
+        <Route path="/" element={<Navigate to="/auth" replace={true} />} />
         <Route path="auth" element={<AuthLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="blank" element={<Blank />} />
