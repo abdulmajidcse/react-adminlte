@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import SidebarMenuDropdown from "./sidebarMenu/SidebarMenuDropdown";
-import SidebarMenuLink from "./sidebarMenu/SidebarMenuLink";
 import adminLteLogo from "./../../assets/dist/img/AdminLTELogo.png";
 import userImage from "./../../assets/dist/img/user2-160x160.jpg";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { themeTypes } from "./../../features/theme/themeSlice";
+import SidebarMenuList from "./sidebarMenu/SidebarMenuList";
 
 export default function Sidebar() {
   const theme = useSelector((state) => state.theme);
@@ -64,25 +63,7 @@ export default function Sidebar() {
             </div>
           </div>
 
-          {/* Sidebar Menu */}
-          <nav className="mt-2">
-            <ul className="nav nav-pills nav-sidebar flex-column">
-              <SidebarMenuLink
-                to="/auth"
-                text="Dashboard"
-                icon="fas fa-tachometer-alt"
-              />
-              <SidebarMenuDropdown
-                icon="fas fa-tachometer-alt"
-                text="Starter Pages"
-              >
-                <SidebarMenuLink to="/auth/blank" text="Active Page" />
-
-                <SidebarMenuLink to="/" text="Inactive Page" />
-              </SidebarMenuDropdown>
-            </ul>
-          </nav>
-          {/* /.sidebar-menu */}
+          <SidebarMenuList />
         </div>
         {/* /.sidebar */}
       </aside>

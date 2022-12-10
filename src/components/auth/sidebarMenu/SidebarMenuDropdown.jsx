@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const SidebarMenuDropdown = ({ icon, text, isActive, children }) => {
+const SidebarMenuDropdown = ({
+  icon,
+  text,
+  badge = "",
+  isActive,
+  children,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const dropdownMenu = (e) => {
@@ -20,6 +26,7 @@ const SidebarMenuDropdown = ({ icon, text, isActive, children }) => {
           <p>
             {text}
             <i className="fas fa-angle-left right" />
+            {badge}
           </p>
         </a>
         <ul className="nav nav-treeview">{children}</ul>
