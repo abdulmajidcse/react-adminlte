@@ -21,8 +21,8 @@ export default function SidebarMenuList() {
           />
 
           <SidebarMenuDropdown
-            icon="fas fa-copy"
-            text="Layout Options"
+            icon="fas fa-book"
+            text="Pages"
             badge={<span className="badge badge-info right">6</span>}
           >
             <SidebarMenuLink to="/" text="Active Page" />
