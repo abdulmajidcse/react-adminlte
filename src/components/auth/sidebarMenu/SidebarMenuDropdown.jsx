@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const SidebarMenuDropdown = ({
-  icon,
+  icon = "far fa-circle",
   text,
   badge = "",
   isActive,
   children,
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const dropdownMenu = (e) => {
     e.preventDefault();

@@ -4,7 +4,9 @@ export default function Footer() {
       {/* Main Footer */}
       <footer className="main-footer">
         {/* To the right */}
-        <div className="float-right d-none d-sm-inline">Anything you want</div>
+        <div class="float-right d-none d-sm-block">
+          <b>Version</b> 3.2.0
+        </div>
         {/* Default to the left */}
         <strong>
           Copyright © 2014-2021
