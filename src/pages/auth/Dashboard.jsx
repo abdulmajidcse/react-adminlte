@@ -1,17 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import AuthCard from "../components/auth/AuthCard";
-import Breadcrumb from "../components/auth/Breadcrumb";
-import messageUser1 from "./../assets/dist/img/user1-128x128.jpg";
-import userImage2 from "./../assets/dist/img/avatar.png";
-import userImage3 from "./../assets/dist/img/avatar2.png";
-import userImage4 from "./../assets/dist/img/avatar3.png";
-import userImage5 from "./../assets/dist/img/user6-128x128.jpg";
-import userImage6 from "./../assets/dist/img/user8-128x128.jpg";
-import userImage7 from "./../assets/dist/img/user2-160x160.jpg";
-import userImage8 from "./../assets/dist/img/avatar5.png";
-import userImage9 from "./../assets/dist/img/default-150x150.png";
+import AuthCard from "../../components/auth/AuthCard";
+import Breadcrumb from "../../components/auth/Breadcrumb";
+import messageUser1 from "./../../assets/dist/img/user1-128x128.jpg";
+import userImage2 from "./../../assets/dist/img/avatar.png";
+import userImage3 from "./../../assets/dist/img/avatar2.png";
+import userImage4 from "./../../assets/dist/img/avatar3.png";
+import userImage5 from "./../../assets/dist/img/user6-128x128.jpg";
+import userImage6 from "./../../assets/dist/img/user8-128x128.jpg";
+import userImage7 from "./../../assets/dist/img/user2-160x160.jpg";
+import userImage8 from "./../../assets/dist/img/avatar5.png";
+import userImage9 from "./../../assets/dist/img/default-150x150.png";
 import { useDispatch } from "react-redux";
-import { updateLoading } from "./../features/loading/loadingSlice";
+import { updateLoading } from "./../../features/loading/loadingSlice";
 import { useEffect } from "react";
 
 export default function Dashboard() {

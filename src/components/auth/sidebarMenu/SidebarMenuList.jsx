@@ -30,7 +30,7 @@ export default function SidebarMenuList() {
             <SidebarMenuLink to="/" text="Inactive Page" />
           </SidebarMenuDropdown>
 
-          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+          <li className="nav-header">MULTI LEVEL EXAMPLE</li>
 
           <SidebarMenuLink to="/" text="Level 1" icon="fas fa-circle" />
           <SidebarMenuDropdown icon="fas fa-circle" text="Level 1">
@@ -46,7 +46,7 @@ export default function SidebarMenuList() {
           </SidebarMenuDropdown>
           <SidebarMenuLink to="/" text="Level 1" icon="fas fa-circle" />
 
-          <li class="nav-header">LABELS</li>
+          <li className="nav-header">LABELS</li>
 
           <SidebarMenuLink
             to="/"

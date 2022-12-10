@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useDispatch } from "react-redux";
-import { updateLoading } from "./../features/loading/loadingSlice";
+import { updateLoading } from "./../../features/loading/loadingSlice";
 import { useEffect } from "react";
-import AuthCard from "../components/auth/AuthCard";
-import Breadcrumb from "../components/auth/Breadcrumb";
-import image1 from "./../assets/dist/img/avatar.png";
-import image2 from "./../assets/dist/img/avatar2.png";
-import image3 from "./../assets/dist/img/avatar3.png";
-import image4 from "./../assets/dist/img/avatar4.png";
-import image5 from "./../assets/dist/img/avatar5.png";
-import image6 from "./../assets/dist/img/photo2.png";
-import image7 from "./../assets/dist/img/photo1.png";
+import AuthCard from "../../components/auth/AuthCard";
+import Breadcrumb from "../../components/auth/Breadcrumb";
+import image1 from "./../../assets/dist/img/avatar.png";
+import image2 from "./../../assets/dist/img/avatar2.png";
+import image3 from "./../../assets/dist/img/avatar3.png";
+import image4 from "./../../assets/dist/img/avatar4.png";
+import image5 from "./../../assets/dist/img/avatar5.png";
+import image6 from "./../../assets/dist/img/photo2.png";
+import image7 from "./../../assets/dist/img/photo1.png";
 
 export default function Widgets() {
   const dispatch = useDispatch();
