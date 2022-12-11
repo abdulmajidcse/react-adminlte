@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { switchTheme, themeTypes } from "./themeSlice";
 import { useEffect } from "react";
 
-export default function Theme() {
+export default function Theme({ style = {} }) {
   const theme = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
@@ -12,7 +12,7 @@ export default function Theme() {
 
   return (
     <>
-      <span className="nav-link">
+      <span className="nav-link" style={style}>
         <i
           className={`fas fa-adjust ${
             theme.type !== themeTypes.system && "d-none"

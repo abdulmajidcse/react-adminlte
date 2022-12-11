@@ -94,12 +94,9 @@ export default function SidebarMenuList() {
             />
           </SidebarMenuDropdown>
 
-          <SidebarMenuDropdown
-            isActive={!pathname.search("/auth/extras")}
-            text="Extras"
-            icon="far fa-plus-square"
-          >
-            <SidebarMenuLink to="/auth/extras/login" text="Login" />
+          <SidebarMenuDropdown text="Extras" icon="far fa-plus-square">
+            <SidebarMenuLink to="/auth/login" text="Login" />
+            <SidebarMenuLink to="/auth/register" text="Register" />
           </SidebarMenuDropdown>
 
           <SidebarMenuDropdown

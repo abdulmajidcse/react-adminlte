@@ -22,6 +22,9 @@ import SimpleSearch from "../pages/auth/search/SimpleSearch";
 import SimpleResult from "../pages/auth/search/SimpleResult";
 import Enhanced from "../pages/auth/search/Enhanced";
 import EnhancedResult from "../pages/auth/search/EnhancedResult";
+import GuestLayout from "./../components/layouts/GuestLayout";
+import Login from "../pages/guest/Login";
+import Register from "../pages/guest/Register";
 
 export default function RouteIndex() {
   return (
@@ -30,6 +33,12 @@ export default function RouteIndex() {
         <Route path="/" element={<FrontendLayout />}>
           <Route index element={<Home />} />
         </Route>
+
+        <Route path="auth" element={<GuestLayout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route>
+
         <Route path="auth" element={<AuthLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="blank" element={<AuthBlank />} />
