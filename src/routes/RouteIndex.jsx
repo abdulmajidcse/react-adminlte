@@ -11,7 +11,8 @@ import MailRead from "../pages/auth/mailbox/MailRead";
 import Invoice from "../pages/auth/example-page/Invoice";
 import Profile from "../pages/auth/example-page/Profile";
 import Ecommerce from "../pages/auth/example-page/Ecommerce";
-import Projects from "./../pages/auth/example-page/project/Projects";
+import ProjectList from "./../pages/auth/example-page/project/ProjectList";
+import ProjectAdd from "../pages/auth/example-page/project/ProjectAdd";
 
 export default function RouteIndex() {
   return (
@@ -36,7 +37,8 @@ export default function RouteIndex() {
             <Route path="profile" element={<Profile />} />
             <Route path="e-commerce" element={<Ecommerce />} />
             <Route path="projects" element={<Outlet />}>
-              <Route index element={<Projects />} />
+              <Route index element={<ProjectList />} />
+              <Route path="add" element={<ProjectAdd />} />
             </Route>
           </Route>
         </Route>

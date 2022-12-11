@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { updateLoading } from "./../../../../features/loading/loadingSlice";
 import { useEffect } from "react";
 
-export default function Projects() {
+export default function ProjectList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,12 +18,12 @@ export default function Projects() {
   return (
     <>
       <AuthCard
-        leftHeader={<h1 className="m-0">Projects</h1>}
+        leftHeader={<h1 className="m-0">Project List</h1>}
         rightHeader={
           <Breadcrumb
             items={[
               { text: "Home", path: "/auth" },
-              { text: "Projects", active: true },
+              { text: "Project List", active: true },
             ]}
           />
         }
