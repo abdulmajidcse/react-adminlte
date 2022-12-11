@@ -14,6 +14,7 @@ import Ecommerce from "../pages/auth/example-page/Ecommerce";
 import ProjectList from "./../pages/auth/example-page/project/ProjectList";
 import ProjectAdd from "../pages/auth/example-page/project/ProjectAdd";
 import ProjectEdit from "../pages/auth/example-page/project/ProjectEdit";
+import ProjectDetail from "../pages/auth/example-page/project/ProjectDetail";
 
 export default function RouteIndex() {
   return (
@@ -37,10 +38,12 @@ export default function RouteIndex() {
             <Route path="invoice" element={<Invoice />} />
             <Route path="profile" element={<Profile />} />
             <Route path="e-commerce" element={<Ecommerce />} />
+
             <Route path="projects" element={<Outlet />}>
               <Route index element={<ProjectList />} />
               <Route path="add" element={<ProjectAdd />} />
               <Route path="edit" element={<ProjectEdit />} />
+              <Route path="detail" element={<ProjectDetail />} />
             </Route>
           </Route>
         </Route>

@@ -54,6 +54,7 @@ export default function SidebarMenuList() {
             <SidebarMenuDropdown
               isActive={!pathname.search("/auth/example-pages/projects")}
               text="Project"
+              badge={<span className="badge badge-warning right">4</span>}
             >
               <SidebarMenuLink
                 to="/auth/example-pages/projects"
@@ -70,6 +71,12 @@ export default function SidebarMenuList() {
               <SidebarMenuLink
                 to="/auth/example-pages/projects/edit"
                 text="Project Edit"
+                icon="far fa-dot-circle"
+              />
+
+              <SidebarMenuLink
+                to="/auth/example-pages/projects/detail"
+                text="Project Detail"
                 icon="far fa-dot-circle"
               />
             </SidebarMenuDropdown>
