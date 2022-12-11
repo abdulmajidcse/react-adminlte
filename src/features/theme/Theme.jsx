@@ -1,20 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { switchTheme, themeTypes } from "./themeSlice";
 import { useEffect } from "react";
-import $ from "jquery";
 
 export default function Theme() {
   const theme = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-
-  // set dar-mode class in body tag
-  $(function () {
-    if (theme.mode === themeTypes.dark) {
-      $("body").addClass("dark-mode");
-    } else {
-      $("body").removeClass("dark-mode");
-    }
-  });
 
   useEffect(() => {
     dispatch(switchTheme());

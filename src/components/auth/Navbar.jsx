@@ -15,7 +15,9 @@ export default function Navbar() {
       {/* Navbar */}
       <nav
         className={`main-header navbar navbar-expand ${
-          theme.mode === themeTypes.dark ? "navbar-dark" : "navbar-light"
+          theme.mode === themeTypes.dark
+            ? "navbar-dark"
+            : "navbar-light  navbar-white"
         }`}
       >
         {/* Left navbar links */}

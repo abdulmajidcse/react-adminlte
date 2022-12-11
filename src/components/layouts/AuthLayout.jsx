@@ -9,19 +9,29 @@ import "./../../assets/plugins/fontawesome-free/css/all.min.css";
 import "./../../assets/dist/css/adminlte.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./../../assets/dist/js/adminlte.min.js";
+import { useSelector } from "react-redux";
+import { themeTypes } from "./../../features/theme/themeSlice";
 
 export default function AuthLayout() {
+  const theme = useSelector((state) => state.theme);
+
   useEffect(() => {
     $(function () {
       $("body").removeAttr("class");
       $("body").addClass("hold-transition sidebar-mini layout-fixed");
+
+      if (theme.mode === themeTypes.dark) {
+        $("body").addClass("dark-mode");
+      } else {
+        $("body").removeClass("dark-mode");
+      }
 
       // when sidebar menu click, automatically hide sidebar for overlay display
       $(".sidebar-link").click(function () {
         $("#sidebar-overlay:visible").click();
       });
     });
-  }, []);
+  }, [theme]);
 
   return (
     <>
