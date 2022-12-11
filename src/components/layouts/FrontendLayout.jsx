@@ -10,6 +10,7 @@ import "./../../assets/dist/js/adminlte.min.js";
 import FrontendNavbar from "../frontend/FrontendNavbar";
 import { useSelector } from "react-redux";
 import { themeTypes } from "./../../features/theme/themeSlice";
+import "./../../assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css";
 
 export default function FrontendLayout() {
   const theme = useSelector((state) => state.theme);

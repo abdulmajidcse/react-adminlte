@@ -16,7 +16,7 @@ const SidebarMenuDropdown = ({
 
   return (
     <>
-      <li className={`nav-item ${isMenuOpen && "menu-open"}`}>
+      <li className={`nav-item ${(isMenuOpen || isActive) && "menu-open"}`}>
         <a
           className={`nav-link sidebar-dropdown ${isActive && "active"}`}
           href="/#"

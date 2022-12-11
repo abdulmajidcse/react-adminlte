@@ -1,7 +1,10 @@
 import SidebarMenuDropdown from "./SidebarMenuDropdown";
 import SidebarMenuLink from "./SidebarMenuLink";
+import { useLocation } from "react-router-dom";
 
 export default function SidebarMenuList() {
+  const { pathname } = useLocation();
+
   return (
     <>
       {/* Sidebar Menu */}
@@ -19,6 +22,22 @@ export default function SidebarMenuList() {
             badge={<span className="right badge badge-danger">New</span>}
             icon="fas fa-th"
           />
+
+          <SidebarMenuLink
+            to="/auth/blank"
+            text="Blank Page"
+            icon="fas fa-copy"
+          />
+
+          <SidebarMenuDropdown
+            isActive={!pathname.search("/auth/mailbox")}
+            icon="far fa-envelope"
+            text="Mailbox"
+          >
+            <SidebarMenuLink to="/auth/mailbox" text="Inbox" />
+            <SidebarMenuLink to="/auth/mailbox/compose" text="Compose" />
+            <SidebarMenuLink to="/auth/mailbox/read" text="Read" />
+          </SidebarMenuDropdown>
 
           <SidebarMenuDropdown
             icon="fas fa-book"
