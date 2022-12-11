@@ -13,6 +13,7 @@ import Profile from "../pages/auth/example-page/Profile";
 import Ecommerce from "../pages/auth/example-page/Ecommerce";
 import ProjectList from "./../pages/auth/example-page/project/ProjectList";
 import ProjectAdd from "../pages/auth/example-page/project/ProjectAdd";
+import ProjectEdit from "../pages/auth/example-page/project/ProjectEdit";
 
 export default function RouteIndex() {
   return (
@@ -39,6 +40,7 @@ export default function RouteIndex() {
             <Route path="projects" element={<Outlet />}>
               <Route index element={<ProjectList />} />
               <Route path="add" element={<ProjectAdd />} />
+              <Route path="edit" element={<ProjectEdit />} />
             </Route>
           </Route>
         </Route>

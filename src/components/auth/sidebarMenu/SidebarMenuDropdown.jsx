@@ -4,10 +4,10 @@ const SidebarMenuDropdown = ({
   icon = "far fa-circle",
   text,
   badge = "",
-  isActive,
+  isActive = false,
   children,
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(isActive);
 
   const dropdownMenu = (e) => {
     e.preventDefault();
@@ -16,9 +16,9 @@ const SidebarMenuDropdown = ({
 
   return (
     <>
-      <li className={`nav-item ${(isMenuOpen || isActive) && "menu-open"}`}>
+      <li className={`nav-item ${isMenuOpen && "menu-open"}`}>
         <a
-          className={`nav-link sidebar-dropdown ${isActive && "active"}`}
+          className={`nav-link sidebar-dropdown ${isMenuOpen && "active"}`}
           href="/#"
           onClick={dropdownMenu}
         >

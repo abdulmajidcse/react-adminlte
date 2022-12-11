@@ -66,6 +66,12 @@ export default function SidebarMenuList() {
                 text="Project Add"
                 icon="far fa-dot-circle"
               />
+
+              <SidebarMenuLink
+                to="/auth/example-pages/projects/edit"
+                text="Project Edit"
+                icon="far fa-dot-circle"
+              />
             </SidebarMenuDropdown>
           </SidebarMenuDropdown>
 
