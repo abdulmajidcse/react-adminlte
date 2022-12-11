@@ -15,6 +15,9 @@ import ProjectList from "./../pages/auth/example-page/project/ProjectList";
 import ProjectAdd from "../pages/auth/example-page/project/ProjectAdd";
 import ProjectEdit from "../pages/auth/example-page/project/ProjectEdit";
 import ProjectDetail from "../pages/auth/example-page/project/ProjectDetail";
+import Contacts from "./../pages/auth/example-page/Contacts";
+import FAQ from "../pages/auth/example-page/FAQ";
+import ContactUs from "../pages/auth/example-page/ContactUs";
 
 export default function RouteIndex() {
   return (
@@ -45,6 +48,10 @@ export default function RouteIndex() {
               <Route path="edit" element={<ProjectEdit />} />
               <Route path="detail" element={<ProjectDetail />} />
             </Route>
+
+            <Route path="contacts" element={<Contacts />} />
+            <Route path="faq" element={<FAQ />} />
+            <Route path="contact-us" element={<ContactUs />} />
           </Route>
         </Route>
       </Routes>

@@ -80,6 +80,18 @@ export default function SidebarMenuList() {
                 icon="far fa-dot-circle"
               />
             </SidebarMenuDropdown>
+
+            <SidebarMenuLink
+              to="/auth/example-pages/contacts"
+              text="Contacts"
+            />
+
+            <SidebarMenuLink to="/auth/example-pages/faq" text="FAQ" />
+
+            <SidebarMenuLink
+              to="/auth/example-pages/contact-us"
+              text="Contact us"
+            />
           </SidebarMenuDropdown>
 
           <li className="nav-header">MULTI LEVEL EXAMPLE</li>
