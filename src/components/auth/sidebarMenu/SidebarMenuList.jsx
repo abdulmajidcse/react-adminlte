@@ -94,6 +94,36 @@ export default function SidebarMenuList() {
             />
           </SidebarMenuDropdown>
 
+          <SidebarMenuDropdown
+            isActive={!pathname.search("/auth/extras")}
+            text="Extras"
+            icon="far fa-plus-square"
+          >
+            <SidebarMenuLink to="/auth/extras/login" text="Login" />
+          </SidebarMenuDropdown>
+
+          <SidebarMenuDropdown
+            isActive={!pathname.search("/auth/search")}
+            text="Search"
+            icon="fas fa-search"
+          >
+            <SidebarMenuLink
+              to="/auth/search/simple-search"
+              text="Simple Search"
+            />
+
+            <SidebarMenuLink
+              to="/auth/search/simple-result"
+              text="Simple Result"
+            />
+
+            <SidebarMenuLink to="/auth/search/enhanced" text="Enhanced" />
+            <SidebarMenuLink
+              to="/auth/search/enhanced-result"
+              text="Enhanced Result"
+            />
+          </SidebarMenuDropdown>
+
           <li className="nav-header">MULTI LEVEL EXAMPLE</li>
 
           <SidebarMenuLink to="/" text="Level 1" icon="fas fa-circle" />

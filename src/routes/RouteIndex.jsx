@@ -18,6 +18,10 @@ import ProjectDetail from "../pages/auth/example-page/project/ProjectDetail";
 import Contacts from "./../pages/auth/example-page/Contacts";
 import FAQ from "../pages/auth/example-page/FAQ";
 import ContactUs from "../pages/auth/example-page/ContactUs";
+import SimpleSearch from "../pages/auth/search/SimpleSearch";
+import SimpleResult from "../pages/auth/search/SimpleResult";
+import Enhanced from "../pages/auth/search/Enhanced";
+import EnhancedResult from "../pages/auth/search/EnhancedResult";
 
 export default function RouteIndex() {
   return (
@@ -52,6 +56,13 @@ export default function RouteIndex() {
             <Route path="contacts" element={<Contacts />} />
             <Route path="faq" element={<FAQ />} />
             <Route path="contact-us" element={<ContactUs />} />
+          </Route>
+
+          <Route path="search" element={<Outlet />}>
+            <Route path="simple-search" element={<SimpleSearch />} />
+            <Route path="simple-result" element={<SimpleResult />} />
+            <Route path="enhanced" element={<Enhanced />} />
+            <Route path="enhanced-result" element={<EnhancedResult />} />
           </Route>
         </Route>
       </Routes>
