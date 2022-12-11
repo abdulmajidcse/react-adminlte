@@ -8,6 +8,7 @@ import AuthBlank from "../pages/auth/AuthBlank";
 import MailBox from "../pages/auth/mailbox/MailBox";
 import MailCompose from "../pages/auth/mailbox/MailCompose";
 import MailRead from "../pages/auth/mailbox/MailRead";
+import Invoice from "../pages/auth/example-page/Invoice";
 
 export default function RouteIndex() {
   return (
@@ -25,6 +26,10 @@ export default function RouteIndex() {
             <Route index element={<MailBox />} />
             <Route path="compose" element={<MailCompose />} />
             <Route path="read" element={<MailRead />} />
+          </Route>
+
+          <Route path="example-pages" element={<Outlet />}>
+            <Route path="invoice" element={<Invoice />} />
           </Route>
         </Route>
       </Routes>

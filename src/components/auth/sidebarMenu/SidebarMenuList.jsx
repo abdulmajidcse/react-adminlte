@@ -40,13 +40,12 @@ export default function SidebarMenuList() {
           </SidebarMenuDropdown>
 
           <SidebarMenuDropdown
+            isActive={!pathname.search("/auth/example-pages")}
             icon="fas fa-book"
             text="Pages"
-            badge={<span className="badge badge-info right">6</span>}
+            badge={<span className="badge badge-info right">10</span>}
           >
-            <SidebarMenuLink to="/" text="Active Page" />
-
-            <SidebarMenuLink to="/" text="Inactive Page" />
+            <SidebarMenuLink to="/auth/example-pages/invoice" text="Invoice" />
           </SidebarMenuDropdown>
 
           <li className="nav-header">MULTI LEVEL EXAMPLE</li>
