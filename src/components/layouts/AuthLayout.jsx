@@ -13,7 +13,7 @@ import "./../../assets/dist/js/adminlte.min.js";
 export default function AuthLayout() {
   useEffect(() => {
     $(function () {
-      $("body").removeClass("layout-top-nav"); // only use for FrontendLayout component if exist it
+      $("body").removeAttr("class");
       $("body").addClass("hold-transition sidebar-mini layout-fixed");
 
       // when sidebar menu click, automatically hide sidebar for overlay display

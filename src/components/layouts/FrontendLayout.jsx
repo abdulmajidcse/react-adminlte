@@ -12,7 +12,7 @@ import "./../../assets/dist/js/adminlte.min.js";
 export default function FrontendLayout() {
   useEffect(() => {
     $(function () {
-      $("body").removeClass("sidebar-mini layout-fixed"); // only use for AuthLayout component if exist it
+      $("body").removeAttr("class");
       $("body").addClass("hold-transition layout-top-nav");
     });
   }, []);
