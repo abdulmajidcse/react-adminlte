@@ -47,6 +47,20 @@ export default function SidebarMenuList() {
           >
             <SidebarMenuLink to="/auth/example-pages/invoice" text="Invoice" />
             <SidebarMenuLink to="/auth/example-pages/profile" text="Profile" />
+            <SidebarMenuLink
+              to="/auth/example-pages/e-commerce"
+              text="E-commerce"
+            />
+            <SidebarMenuDropdown
+              isActive={!pathname.search("/auth/example-pages/projects")}
+              text="Project"
+            >
+              <SidebarMenuLink
+                to="/auth/example-pages/projects"
+                text="Project List"
+                icon="far fa-dot-circle"
+              />
+            </SidebarMenuDropdown>
           </SidebarMenuDropdown>
 
           <li className="nav-header">MULTI LEVEL EXAMPLE</li>
