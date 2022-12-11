@@ -46,6 +46,7 @@ export default function SidebarMenuList() {
             badge={<span className="badge badge-info right">10</span>}
           >
             <SidebarMenuLink to="/auth/example-pages/invoice" text="Invoice" />
+            <SidebarMenuLink to="/auth/example-pages/profile" text="Profile" />
           </SidebarMenuDropdown>
 
           <li className="nav-header">MULTI LEVEL EXAMPLE</li>

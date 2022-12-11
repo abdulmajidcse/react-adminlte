@@ -9,6 +9,7 @@ import MailBox from "../pages/auth/mailbox/MailBox";
 import MailCompose from "../pages/auth/mailbox/MailCompose";
 import MailRead from "../pages/auth/mailbox/MailRead";
 import Invoice from "../pages/auth/example-page/Invoice";
+import Profile from "../pages/auth/example-page/Profile";
 
 export default function RouteIndex() {
   return (
@@ -30,6 +31,7 @@ export default function RouteIndex() {
 
           <Route path="example-pages" element={<Outlet />}>
             <Route path="invoice" element={<Invoice />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
         </Route>
       </Routes>
