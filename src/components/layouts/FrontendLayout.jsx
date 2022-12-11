@@ -18,7 +18,7 @@ export default function FrontendLayout() {
   useEffect(() => {
     $(function () {
       $("body").removeAttr("class");
-      $("body").addClass("hold-transition layout-top-nav");
+      $("body").addClass("layout-top-nav");
 
       if (theme.mode === themeTypes.dark) {
         $("body").addClass("dark-mode");

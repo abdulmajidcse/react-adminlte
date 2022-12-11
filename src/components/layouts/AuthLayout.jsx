@@ -19,7 +19,7 @@ export default function AuthLayout() {
   useEffect(() => {
     $(function () {
       $("body").removeAttr("class");
-      $("body").addClass("hold-transition sidebar-mini layout-fixed");
+      $("body").addClass("sidebar-mini layout-fixed");
 
       if (theme.mode === themeTypes.dark) {
         $("body").addClass("dark-mode");
