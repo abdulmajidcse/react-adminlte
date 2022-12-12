@@ -26,6 +26,7 @@ import GuestLayout from "./../components/layouts/GuestLayout";
 import Login from "../pages/guest/Login";
 import Register from "../pages/guest/Register";
 import ForgotPassword from "../pages/guest/ForgotPassword";
+import RecoverPassword from "../pages/guest/RecoverPassword";
 
 export default function RouteIndex() {
   return (
@@ -39,6 +40,7 @@ export default function RouteIndex() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="recover-password" element={<RecoverPassword />} />
         </Route>
 
         <Route path="auth" element={<AuthLayout />}>

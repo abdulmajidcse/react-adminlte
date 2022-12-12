@@ -101,6 +101,10 @@ export default function SidebarMenuList() {
               to="/auth/forgot-password"
               text="Forgot Password"
             />
+            <SidebarMenuLink
+              to="/auth/recover-password"
+              text="Recover Password"
+            />
           </SidebarMenuDropdown>
 
           <SidebarMenuDropdown
