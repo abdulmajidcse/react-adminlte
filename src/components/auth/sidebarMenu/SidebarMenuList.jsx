@@ -29,6 +29,12 @@ export default function SidebarMenuList() {
             icon="fas fa-copy"
           />
 
+          <SidebarMenuLink
+            to="/auth/simple-tables"
+            text="Simple Tables"
+            icon="fas fa-table"
+          />
+
           <SidebarMenuDropdown
             isActive={!pathname.search("/auth/mailbox")}
             icon="far fa-envelope"

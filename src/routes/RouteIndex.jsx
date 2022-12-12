@@ -29,6 +29,7 @@ import ForgotPassword from "../pages/guest/ForgotPassword";
 import RecoverPassword from "../pages/guest/RecoverPassword";
 import NotFound from "../pages/NotFound";
 import ServerError from "../pages/ServerError";
+import SimpleTables from "../pages/auth/SimpleTables";
 
 export default function RouteIndex() {
   return (
@@ -49,6 +50,8 @@ export default function RouteIndex() {
           <Route index element={<Dashboard />} />
           <Route path="blank" element={<AuthBlank />} />
           <Route path="widgets" element={<Widgets />} />
+
+          <Route path="simple-tables" element={<SimpleTables />} />
 
           <Route path="404" element={<NotFound />} />
           <Route path="500" element={<ServerError />} />
