@@ -30,6 +30,10 @@ import RecoverPassword from "../pages/guest/RecoverPassword";
 import NotFound from "../pages/NotFound";
 import ServerError from "../pages/ServerError";
 import SimpleTables from "../pages/auth/SimpleTables";
+import General from "./../pages/auth/ui-element/General";
+import Buttons from "./../pages/auth/ui-element/Buttons";
+import Timeline from "./../pages/auth/ui-element/Timeline";
+import Ribbons from "./../pages/auth/ui-element/Ribbons";
 
 export default function RouteIndex() {
   return (
@@ -55,6 +59,13 @@ export default function RouteIndex() {
 
           <Route path="404" element={<NotFound />} />
           <Route path="500" element={<ServerError />} />
+
+          <Route path="ui-elements" element={<Outlet />}>
+            <Route path="general" element={<General />} />
+            <Route path="buttons" element={<Buttons />} />
+            <Route path="timeline" element={<Timeline />} />
+            <Route path="ribbons" element={<Ribbons />} />
+          </Route>
 
           <Route path="mailbox" element={<Outlet />}>
             <Route index element={<MailBox />} />

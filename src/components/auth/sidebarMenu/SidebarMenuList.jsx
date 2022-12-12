@@ -36,6 +36,17 @@ export default function SidebarMenuList() {
           />
 
           <SidebarMenuDropdown
+            isActive={!pathname.search("/auth/ui-elements")}
+            icon="fas fa-tree"
+            text="UI Elements"
+          >
+            <SidebarMenuLink to="/auth/ui-elements/general" text="General" />
+            <SidebarMenuLink to="/auth/ui-elements/buttons" text="Buttons" />
+            <SidebarMenuLink to="/auth/ui-elements/timeline" text="Timeline" />
+            <SidebarMenuLink to="/auth/ui-elements/ribbons" text="Ribbons" />
+          </SidebarMenuDropdown>
+
+          <SidebarMenuDropdown
             isActive={!pathname.search("/auth/mailbox")}
             icon="far fa-envelope"
             text="Mailbox"
