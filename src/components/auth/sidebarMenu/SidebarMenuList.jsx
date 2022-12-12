@@ -97,6 +97,10 @@ export default function SidebarMenuList() {
           <SidebarMenuDropdown text="Extras" icon="far fa-plus-square">
             <SidebarMenuLink to="/auth/login" text="Login" />
             <SidebarMenuLink to="/auth/register" text="Register" />
+            <SidebarMenuLink
+              to="/auth/forgot-password"
+              text="Forgot Password"
+            />
           </SidebarMenuDropdown>
 
           <SidebarMenuDropdown

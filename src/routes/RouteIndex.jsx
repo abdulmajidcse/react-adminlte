@@ -25,6 +25,7 @@ import EnhancedResult from "../pages/auth/search/EnhancedResult";
 import GuestLayout from "./../components/layouts/GuestLayout";
 import Login from "../pages/guest/Login";
 import Register from "../pages/guest/Register";
+import ForgotPassword from "../pages/guest/ForgotPassword";
 
 export default function RouteIndex() {
   return (
@@ -37,6 +38,7 @@ export default function RouteIndex() {
         <Route path="auth" element={<GuestLayout />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
         </Route>
 
         <Route path="auth" element={<AuthLayout />}>

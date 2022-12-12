@@ -64,7 +64,7 @@ export default function Login() {
       </div>
       {/* /.social-auth-links */}
       <p className="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
+        <Link to="/auth/forgot-password">I forgot my password</Link>
       </p>
       <p className="mb-0">
         <Link to="/auth/register" className="text-center">

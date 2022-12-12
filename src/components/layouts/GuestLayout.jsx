@@ -19,7 +19,9 @@ export default function AuthLayout() {
 
   useEffect(() => {
     $(function () {
+      $("html").removeAttr("style");
       $("body").removeAttr("class");
+      $("body").removeAttr("style");
       $("body").addClass(`${isRegisterPath ? "register-page" : "login-page"}`);
 
       if (theme.mode === themeTypes.dark) {
