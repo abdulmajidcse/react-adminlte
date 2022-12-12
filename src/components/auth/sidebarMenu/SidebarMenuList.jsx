@@ -94,7 +94,13 @@ export default function SidebarMenuList() {
             />
           </SidebarMenuDropdown>
 
-          <SidebarMenuDropdown text="Extras" icon="far fa-plus-square">
+          <SidebarMenuDropdown
+            text="Extras"
+            icon="far fa-plus-square"
+            isActive={
+              !pathname.search("/auth/404") || !pathname.search("/auth/500")
+            }
+          >
             <SidebarMenuLink to="/auth/login" text="Login" />
             <SidebarMenuLink to="/auth/register" text="Register" />
             <SidebarMenuLink
@@ -105,6 +111,8 @@ export default function SidebarMenuList() {
               to="/auth/recover-password"
               text="Recover Password"
             />
+            <SidebarMenuLink to="/auth/404" text="Error 404" />
+            <SidebarMenuLink to="/auth/500" text="Error 500" />
           </SidebarMenuDropdown>
 
           <SidebarMenuDropdown

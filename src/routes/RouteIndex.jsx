@@ -27,6 +27,8 @@ import Login from "../pages/guest/Login";
 import Register from "../pages/guest/Register";
 import ForgotPassword from "../pages/guest/ForgotPassword";
 import RecoverPassword from "../pages/guest/RecoverPassword";
+import NotFound from "../pages/NotFound";
+import ServerError from "../pages/ServerError";
 
 export default function RouteIndex() {
   return (
@@ -47,6 +49,9 @@ export default function RouteIndex() {
           <Route index element={<Dashboard />} />
           <Route path="blank" element={<AuthBlank />} />
           <Route path="widgets" element={<Widgets />} />
+
+          <Route path="404" element={<NotFound />} />
+          <Route path="500" element={<ServerError />} />
 
           <Route path="mailbox" element={<Outlet />}>
             <Route index element={<MailBox />} />
@@ -78,6 +83,8 @@ export default function RouteIndex() {
             <Route path="enhanced-result" element={<EnhancedResult />} />
           </Route>
         </Route>
+
+        <Route path="*" element={<NotFound isNotFound />} />
       </Routes>
     </>
   );
