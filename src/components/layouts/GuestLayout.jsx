@@ -11,7 +11,7 @@ import { themeTypes } from "./../../features/theme/themeSlice";
 import { useLocation } from "react-router-dom";
 import Theme from "../../features/theme/Theme";
 
-export default function AuthLayout() {
+export default function GuestLayout() {
   const theme = useSelector((state) => state.theme);
   const { pathname } = useLocation();
 
